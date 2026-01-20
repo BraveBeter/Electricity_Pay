@@ -1,11 +1,9 @@
 import json
 import os
-import socket
 import subprocess
 import sys
 import time
 from datetime import date
-import socks  # 需先 pip install PySocks
 
 import requests
 from bs4 import BeautifulSoup

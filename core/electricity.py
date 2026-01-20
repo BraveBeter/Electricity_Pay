@@ -29,8 +29,7 @@ from bs4 import BeautifulSoup
 from requests import HTTPError
 
 from core import auth
-from core.util import AuthServiceError, VPNError, test_network
-from core.vpn_manage import VpnManage
+from core.util import AuthServiceError
 
 
 @dataclass
