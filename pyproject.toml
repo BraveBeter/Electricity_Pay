@@ -1,0 +1,12 @@
+[project]
+name = "electricity-pay"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "beautifulsoup4",   # 对应 from bs4 import BeautifulSoup
+    "pysocks",          # 对应 import socks
+    "python-dotenv",    # 对应 from dotenv import load_dotenv
+    "requests",         # 对应 import requests]
+]
