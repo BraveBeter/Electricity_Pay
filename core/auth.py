@@ -1,8 +1,10 @@
 import time
 import requests
 from bs4 import BeautifulSoup
+
 from core.util import AuthServiceError
 import os
+from typing import Optional, Dict
 
 
 
@@ -19,11 +21,15 @@ class AuthService:
         user_name: str,
         password: str,
         remember_me: bool = False,
+        proxy_config: Optional[Dict[str, str]] = None,
         **kwargs,
     ) -> None:
         self._kwargs = kwargs
 
         self._session = requests.Session()
+        # 应用 SOCKS5 代理配置
+        if proxy_config:
+            self._session.proxies = proxy_config
         self._session.headers["User-Agent"] = os.getenv('FEE_UA', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36 Edg/133.0.0.0')
         response = self._session.get(
             self.login_url,
@@ -121,6 +127,8 @@ class AuthService:
     def logout(self) -> None:
         """退出登陆。"""
         self._session.get(self.logout_url).raise_for_status()
+
+
 
 
 __all__ = ("AuthService",)
