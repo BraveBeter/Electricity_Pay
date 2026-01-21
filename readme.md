@@ -12,6 +12,7 @@
 1. 请先仿照`.env_example`创建并修改`.env`，填写对应信息。
 2. 使用`uv`运行 `main.py`
 ```bash
+  uv sync
   uv run main.py
 ```
 也可使用`pyinstaller`进行打包，获得可执行程序后直接使用。
