@@ -36,7 +36,7 @@
 
 ## 鸣谢
 
-使用了[docker-easyconnect](https://github.com/docker-easyconnect/docker-easyconnect)实现静默登录EasyConnect
+使用了[docker-easyconnect](https://github.com/docker-easyconnect/docker-easyconnect)实现静默登录EasyConnect   
 使用了[SUEP-TOOKIT](https://github.com/zhengxyz123/suep-toolkit)的开源代码,在此基础上增加了一些功能，
 原项目采用MIT-LICENSE，本项目继承并遵循原项目的许可证。
 
